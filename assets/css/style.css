@@ -16,6 +16,10 @@ section {
     overflow: hidden;
 }
 
+section.active {
+    background: linear-gradient(to right, #111111, #161623);
+}
+
 section .color {
     position: absolute;
     filter: blur(150px);
@@ -29,6 +33,10 @@ section .color:nth-child(1) {
     background: #ff359b;
 }
 
+section.active .color:nth-child(1) {
+    background: #ffc107;
+}
+
 section .color:nth-child(2) {
     bottom: -150px;
     left: 100px;
@@ -38,6 +46,10 @@ section .color:nth-child(2) {
     background: #fffd87;
 }
 
+section.active .color:nth-child(2) {
+    background: #2196f3;
+}
+
 section .color:nth-child(3) {
     bottom: 50px;
     right: 100px;
@@ -45,6 +57,10 @@ section .color:nth-child(3) {
     height: 300px;
     border-radius: 50%;
     background: #00d2ff;
+}
+
+section.active .color:nth-child(3) {
+    background: #31ff38;
 }
 
 .box {
@@ -188,6 +204,35 @@ section .color:nth-child(3) {
     color: #fff;
     font-size: 1.5em;
     font-weight: 500;
+}
+
+.dark {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: #111;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.active .dark {
+    background: #fff;
+}
+
+.dark::before {
+    content: '\f186';
+    font-family: fontAwesome;
+    color: #fff;
+}
+
+.active .dark::before {
+    content: '\f185';
+    color: #111;
 }
 
 @media (max-width: 600px) {
